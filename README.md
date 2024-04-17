@@ -17,7 +17,10 @@ These hashes will link together the blocks. This would make it difficult for peo
     - String lastHash (hash of previous block, plays a big part in validating everything)
     - String data
     - long timeStamp
-2. 
+    + constructor
+2. Create main class for entire chain
+3. Helper/utility class to encode data
+
 
 
 ## Credits and Resources
@@ -29,3 +32,5 @@ Other links to documentation I used to create/understand the code:
 https://docs.oracle.com/en/java/javase/11/security/java-security-overview1.html#GUID-74E1EFEA-F1DD-466C-B61A-CB5E89FA50DE
 ### Secure Hash Algorithms (SHA): 
 https://brilliant.org/wiki/secure-hashing-algorithms/#:~:text=Secure%20Hash%20Algorithms%2C%20also%20known,modular%20additions%2C%20and%20compression%20functions.
+### SHA-256 and using .messageDigest
+https://www.baeldung.com/sha-256-hashing-java

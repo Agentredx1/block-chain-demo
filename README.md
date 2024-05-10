@@ -12,7 +12,7 @@ Multiple Block objects will be in array, they'll each contain a unique hash as w
 These hashes will link together the blocks. This would make it difficult for people to tamper with new blocks, and impossible (I think?) to mess with old ones.
 
 ## Steps:
-1. Create a Block object, it will only contain a few variables
+1. Create a Block class, it will only contain a few variables
     - String hash (sort of like that blocks ID. Like a fingerprint for a person, unique, and influenced by previous hash)
     - String lastHash (hash of previous block, plays a big part in validating everything)
     - String data

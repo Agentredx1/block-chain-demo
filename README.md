@@ -1,11 +1,16 @@
 # Simple Block Chain created with Java
+
 ## Goal:
 further understanding of how a simple block chain functions
 and get better idea of it's possible applications.
 
-I'll be following a tutorial, and will include links to those below.
-I'll try and deviate and personalize it a bit, but the base will be very close to tutorial.
-(Not going to overcomplicate things reinventing the basics/renaming variables)
+I'll be following a tutorial pretty closely, and will include links to those below.
+I'll try and deviate and personalize it a bit, but it's really not doing much ¯\_(ツ)_/¯
+
+## Where I'm at:
+5/10/2024 - added all class files and Json output for three blocks, can mine, validate chain, pretty good!
+## To do:
+Add transactions?
 
 ## Idea:
 Multiple Block objects will be in array, they'll each contain a unique hash as well as the previous block's hash.
@@ -17,9 +22,17 @@ These hashes will link together the blocks. This would make it difficult for peo
     - String lastHash (hash of previous block, plays a big part in validating everything)
     - String data
     - long timeStamp
-    + constructor
+    + constructor()
+    + void mine()
+    + String newHash()
 2. Create main class for entire chain
-3. Helper/utility class to encode data
+    - ArrayList blockChain
+    - integer difficulty
+    + constructor()
+    + boolean validateChain()
+3. Helper/utility class to encode data with SHA256
+    + String Sha256()
+    + String byteToHex();
 
 
 

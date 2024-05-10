@@ -1,10 +1,10 @@
+package src;
 /*ShaHelper class
  * Uses SHA-256 to generate hash
  * for new Block object
  * Created: 5/10/2024 
 */
 //!! indiciate a line I could use further understanding
-import java.io.*;
 import java.security.MessageDigest; //!! not thread safe
 
 

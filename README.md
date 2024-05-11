@@ -12,9 +12,14 @@ I'll try and deviate and personalize it a bit, but it's really not doing much ¯
 ## To do:
 Add transactions?
 
-## Idea:
+## Idea: Follows proof of work
 Multiple Block objects will be in array, they'll each contain a unique hash as well as the previous block's hash.
-These hashes will link together the blocks. This would make it difficult for people to tamper with new blocks, and impossible (I think?) to mess with old ones.
+These hashes will link together the blocks. This would make it difficult for people to tamper with new blocks, and impossible to mess with old ones.
+Each hash is calcuted using a secure hashing algorithm (SHA-256) and all of the data from the previous block.
+The computer randomly hashes^ out numbers till the hash is less than or equal to a secret target hexadecimal number.
+Once this happens, a block is completed. The difficulty determines how many leading 0's the target number will have. 
+Higher difficulty = more 0's = smaller number = more crunching numbers for the right one.
+The more nodes/miners a blockchain has, the stronger it is.
 
 ## Steps:
 1. Create a Block class, it will only contain a few variables

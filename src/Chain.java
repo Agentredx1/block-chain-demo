@@ -9,7 +9,7 @@ import com.google.gson.*;
 public class Chain {
 
     public static ArrayList<Block> blockChain = new ArrayList<Block>();
-    public static int difficulty = 4; // ~hashrate, or energy needed for new block
+    public static int difficulty = 6; // would translate to hashrate, or even energy required for new block
     /* Validate Chain
      * Checks chain is valid by comparing Block's to self and previous Blocks
      * Returns Boolean, true if chain is valid
@@ -42,12 +42,19 @@ public class Chain {
     }//end validateChain
     public static void main(String[] args){
         blockChain.add(new Block("Message1", "0"));
+        System.out.println("Mining...");
         blockChain.get(0).mine(difficulty);
         blockChain.add(new Block("Message2", blockChain.get(blockChain.size() - 1).hash));
+        System.out.println("Mining...");        
         blockChain.get(1).mine(difficulty);
         blockChain.add(new Block("Message3", blockChain.get(blockChain.size() - 1).hash));
+        System.out.println("Mining...");        
         blockChain.get(2).mine(difficulty);
+        blockChain.add(new Block("Message4", blockChain.get(blockChain.size() - 1).hash));
+        System.out.println("Mining...");        
+        blockChain.get(3).mine(difficulty);
 
+        System.out.println("/n BlockChain:");
         String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockChain);
         System.out.println(blockchainJson);
     }

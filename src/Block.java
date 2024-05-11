@@ -11,7 +11,8 @@ public class Block {
     public String refHash; //reference-hash
     private long timeStamp;
     private String data;
-    private int nonce; //I wanted to name this "attempts",
+    private int nonce; 
+    //I wanted to name this "attempts",
     //but it only represents a single node/miner,
     //and they could start with whatever nonce they wanted.
     
